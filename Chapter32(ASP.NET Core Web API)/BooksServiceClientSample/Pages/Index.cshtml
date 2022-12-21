@@ -1,0 +1,43 @@
+﻿@page
+@using BooksServiceClientSample.Models;
+@using static BooksServiceClientSample.NameHelper
+@addTagHelper *, TagHelperSamles
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    string detailPage = PageNameOf<Pages_CreateOrEditBookChapter>();
+    Dictionary<string, string> param = new();
+}
+
+<h2>Book chapters are as follows:</h2>
+
+@*<table items="@Model.bookChapters"></table>*@
+<table>
+    <thead>
+        <tr>
+            <th>@Html.DisplayName(nameof(BookChapter.Number))</th>
+            <th>@Html.DisplayName(nameof(BookChapter.Title))</th>
+            <th>@Html.DisplayName(nameof(BookChapter.Pages))</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (BookChapter bookChapter in Model.BookChapters)
+        {
+            <tr>
+                <td>@Html.DisplayName(bookChapter.Number.ToString())</td>
+                <td>@Html.DisplayName(bookChapter.Title)</td>
+                <td>@Html.DisplayName(bookChapter.Pages.ToString())</td>
+                @{
+                    param.Clear();
+                    if (bookChapter.Id.ToString() is string id)
+                    {
+                        param["id"] = id;
+                    }
+                    param["edit"] = false.ToString();
+                }
+                <td><a asp-page="@detailPage" asp-all-route-data="@param">Detail</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-page="@detailPage">Create New</a>

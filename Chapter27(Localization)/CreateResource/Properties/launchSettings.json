@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CreateResource": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\chenlu\\source\\repos\\Chapter27(Localization)\\CreateResource"
+    }
+  }
+}

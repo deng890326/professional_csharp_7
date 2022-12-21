@@ -1,0 +1,7 @@
+{
+    "Data": {
+        "DefaultConnection": {
+            "Connection": "server=(localdb)\\MSSQLLocalDB;integrated security=SSPI;database=Books;trusted_connection=true"
+        }
+    }
+}

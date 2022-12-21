@@ -1,0 +1,70 @@
+﻿@page
+@using static BooksServiceClientSample.NameHelper;
+@model BooksServiceClientSample.Pages.CreateOrEditBookChapterModel
+@{
+}
+
+@if (!Model.IsCreate)
+{
+    if (Model.IsEdit)
+    {
+        <a asp-route-id="@Model.Id" 
+           asp-route-edit="@false">Cancel Edit</a>
+    }
+    else
+    {
+        <a asp-route-id="@Model.Id"
+           asp-route-edit="@true">Begin Edit</a>
+    }
+    @using(Html.BeginForm(FormMethod.Post))
+    {
+        <button type="submit"
+            asp-route-id="@Model.Id"
+            asp-route-delete="@true">Delete</button>
+    }
+}
+
+@using(Html.BeginForm(FormMethod.Post))
+{
+    @Html.LabelFor(m => m.BookChapter.Number)
+    @Html.DisplayName(": ")
+    @if (Model.IsEdit)
+    {
+        @Html.TextBoxFor(m => m.BookChapter.Number)
+    }
+    else
+    {
+        @Html.DisplayTextFor(m => m.BookChapter.Number)    
+    }
+    <br />
+    @Html.LabelFor(m => m.BookChapter.Title)
+    @Html.DisplayName(": ")
+    @if (Model.IsEdit)
+    {
+        @Html.TextBoxFor(m => m.BookChapter.Title)
+    }
+    else
+    {
+        @Html.DisplayTextFor(m => m.BookChapter.Title)    
+    }
+    <br />
+    @Html.LabelFor(m => m.BookChapter.Pages)
+    @Html.DisplayName(": ")
+    @if (Model.IsEdit)
+    {
+        @Html.TextBoxFor(m => m.BookChapter.Pages)
+    }
+    else
+    {
+        @Html.DisplayTextFor(m => m.BookChapter.Pages)    
+    }
+    <br />
+    if (Model.IsEdit)
+    {
+        <button type="submit">Submit</button>
+    }
+    else
+    {
+        <a asp-page="@PageNameOf(typeof(Pages_Index))">Back To list</a>
+    }
+}

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BooksAppX.Views.BookDetailPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="编辑" Command="{Binding BeginEditCmd}" />
+        <ToolbarItem Text="取消编辑" Command="{Binding CancelEditCmd}" />
+        <ToolbarItem Text="保存" Command="{Binding EndEditCmd}" />
+    </ContentPage.ToolbarItems>
+    <StackLayout Spacing="20" Padding="15">
+        <Label FontSize="Medium">Id:</Label>
+        <Entry IsEnabled="False"
+               Text="{Binding ShowingItem.BookId, Mode=OneWay}" />
+        <Label FontSize="Medium">Title:</Label>
+        <Entry IsEnabled="{Binding IsEditMode, Mode=OneWay}"
+               Text="{Binding ShowingItem.Title, Mode=TwoWay}" />
+        <Label FontSize="Medium">Publisher:</Label>
+        <Entry IsEnabled="{Binding IsEditMode, Mode=OneWay}"
+               Text="{Binding ShowingItem.Publisher, Mode=TwoWay}" />
+    </StackLayout>
+</ContentPage>

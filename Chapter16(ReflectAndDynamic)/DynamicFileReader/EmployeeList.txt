@@ -1,0 +1,5 @@
+﻿FirstName, LastName, City, State
+Niki, Luada, Vienna, Austria
+Carlos, Reutemann, Santa Fe, Argentine
+Sebastian, Vettel, Thurgovia, Switzerland
+Deng, Yingwei, Guangdong

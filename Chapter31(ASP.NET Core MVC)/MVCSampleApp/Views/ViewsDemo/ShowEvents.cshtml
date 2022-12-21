@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<Event>
+@{
+    var tab = HtmlEncoder.Encode("\t");
+    tab = Html.Encode("\t");
+    tab = "____";
+}
+
+<h2>@ViewData[EventTitle]</h2>
+<table>
+    @foreach (Event e in Model)
+    {
+        <tr>
+            <td>@($"{e.Day:G}{tab}")</td>
+            <td>@e.Text</td>
+        </tr>
+    }
+</table>

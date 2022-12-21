@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Books]
+(
+	[BookId] INT IDENTITY(1, 1) NOT NULL,
+	[Title] NVARCHAR(50) NOT NULL,
+	[Publisher] NVARCHAR(25) NULL,
+	CONSTRAINT [PK_Books] PRIMARY KEY CLUSTERED ([BookId] ASC)
+)

@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    (function ()
+    {
+        window.onload = function ()
+        {
+            var buttonEvents = document.getElementById("getEvents");
+            buttonEvents.onclick = function ()
+            {
+                if (window.fetch == null)
+                {
+                    document.getElementById("output").innerHTML = 
+                        "<div>window.fetch not supported. Use another browser</div>";
+                    return;
+                }
+                fetch("/ViewsDemo/ShowEvents")
+                    .then(function (response)
+                    {
+                        return response.text();
+                    })
+                    .then(function (text)
+                    {
+                        document.getElementById("output").innerHTML = text
+                    });
+            };
+        };
+    })();
+</script>
+<button id="getEvents">Get Events</button>
+<div id="output"></div>

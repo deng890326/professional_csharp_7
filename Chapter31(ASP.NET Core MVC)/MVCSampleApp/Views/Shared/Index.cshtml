@@ -1,0 +1,39 @@
+﻿@using MVCSampleApp.Controllers;
+@using System.Reflection;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Type
+@{
+    Type controllerType = ViewData.Model;
+    string controller = NameHelper.Controller(controllerType);
+
+    ViewData[Title] = controller;
+    IEnumerable<string> actions =
+        from m in controllerType.GetMethods()
+        where filterActionName(m.Name) && m.DeclaringType == controllerType && m.IsPublic
+            && filterActionAttribute(m.CustomAttributes)
+        select m.Name;
+
+    static bool filterActionName(string name)
+    {
+        return name != "Index" && !name.StartsWith("get_") && !name.StartsWith("set_");
+    }
+
+    static bool filterActionAttribute(IEnumerable<CustomAttributeData> attributeDatas)
+    {
+        var attrTypes = attributeDatas.Select(a => a.AttributeType);
+        return !attrTypes.Contains(typeof(HttpPostAttribute)) &&
+               !attrTypes.Contains(typeof(HttpPutAttribute)) &&
+               !attrTypes.Contains(typeof(HttpDeleteAttribute));
+    }
+}
+
+<ul>
+    @foreach (string act in actions)
+    {
+            <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller=@controller asp-action=@act>@act</a>
+            </li>
+    }
+</ul>

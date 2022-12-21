@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns:pages="http://rotorgames.com"
+                 xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="BooksAppX.Views.MessagePopup">
+    <StackLayout WidthRequest="300"
+                 HeightRequest="150"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 BackgroundColor="White">
+        <Label x:Name="TitleLabel"
+               FontSize="Title"
+               TextColor="Black"
+               HorizontalOptions="Center" />
+        <Label x:Name="MessageLabel"
+               FontSize="Body"
+               TextColor="Black"
+               Margin="0, 10, 0, 0"
+               HorizontalOptions="Center" />
+    </StackLayout>
+</pages:PopupPage>

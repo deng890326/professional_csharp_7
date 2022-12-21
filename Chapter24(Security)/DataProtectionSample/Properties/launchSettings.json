@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "DataProtectionSample": {
+      "commandName": "Project",
+      "commandLineArgs": "-r 新建文本文档.txt",
+      "workingDirectory": "C:\\Users\\wei\\Desktop"
+    }
+  }
+}

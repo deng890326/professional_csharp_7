@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PInvokeSample": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\addins\\\r\nC:\\addins1\\"
+    }
+  }
+}

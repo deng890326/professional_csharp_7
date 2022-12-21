@@ -1,0 +1,14 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IDictionary<int, string>
+@{
+    IEnumerable<SelectListItem> SelectItem(int key) =>
+        from it in Model
+        select new SelectListItem(
+            text: it.Value,
+            value: it.Key.ToString(),
+            selected: it.Key == key);
+}
+
+@Html.DropDownList("carslist", SelectItem(4))

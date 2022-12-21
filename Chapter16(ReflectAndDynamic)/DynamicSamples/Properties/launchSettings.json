@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DynamicSamples": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\addins\\CalculatorLib.dll"
+    }
+  }
+}

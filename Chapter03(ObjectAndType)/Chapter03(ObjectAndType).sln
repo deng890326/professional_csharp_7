@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Property", "Chapter03\Property.csproj", "{2DEF18AF-DE97-4304-BE41-B26A6844FF5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullable", "Nullable\Nullable.csproj", "{6FA7142F-31FA-4B49-A609-5D80C1B640A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumTest", "Enum\EnumTest.csproj", "{5E63CC51-F0BB-4937-8726-3C747CE55F3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DEF18AF-DE97-4304-BE41-B26A6844FF5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DEF18AF-DE97-4304-BE41-B26A6844FF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DEF18AF-DE97-4304-BE41-B26A6844FF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DEF18AF-DE97-4304-BE41-B26A6844FF5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA7142F-31FA-4B49-A609-5D80C1B640A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA7142F-31FA-4B49-A609-5D80C1B640A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA7142F-31FA-4B49-A609-5D80C1B640A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA7142F-31FA-4B49-A609-5D80C1B640A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E63CC51-F0BB-4937-8726-3C747CE55F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E63CC51-F0BB-4937-8726-3C747CE55F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E63CC51-F0BB-4937-8726-3C747CE55F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E63CC51-F0BB-4937-8726-3C747CE55F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11C167C2-2C04-484D-8F96-BCBAC492388E}
+	EndGlobalSection
+EndGlobal
